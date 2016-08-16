@@ -12,7 +12,7 @@
     NSString *_name;
     NSInteger _age;
     NSString *_interests;
-    NSInteger *_shoeSize;
+    NSInteger _shoeSize;
     
 }
 

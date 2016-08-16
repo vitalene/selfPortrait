@@ -18,19 +18,27 @@
 }
 - (NSArray *)interests {
     NSArray *interests = @[@"long walks", @"Kittens", @"fluffy towels"];
-    return interests;
+    return interests; // This is a read-only array 1 ★!
 }
 -(NSInteger)shoeSize {
-    return *(_shoeSize); // why did you need an *() box here?
+    return (_shoeSize);
 }
 
 - (void)setshoeSize:(NSInteger)size {
-    _shoeSize = &size; // why did I need the & here?
+    _shoeSize = size;
 }
 - (void)setName:(NSString*)name;{
+    _name = name;
     
 }
 - (void)setAge:(NSInteger)age {
     _age = age;
 }
+
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"My name is %@.  I am %@ years old and my shoe size is %@. I am interested in %@", [self name], @([self age]), @([self shoeSize]), [self interests]];
+}
+
 @end
+

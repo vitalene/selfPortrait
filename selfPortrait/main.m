@@ -12,7 +12,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
-    
+        Person *aPerson = [Person new];
+        [aPerson setName:@"Diane"];
+        [aPerson setAge:25];
+        [aPerson setshoeSize:8];
+        
+        NSLog(@"%@", aPerson);
     
     
     }
